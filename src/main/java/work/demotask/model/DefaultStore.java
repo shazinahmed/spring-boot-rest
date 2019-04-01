@@ -40,7 +40,7 @@ public class DefaultStore implements Store {
 	public LineItem[] getCartItems() {
 		List<LineItem> lineItems = cartService.getCartItems();
 		//TODO decide on whether to use a comparator or a lambda expression
-		lineItems.sort((LineItem l1, LineItem l2) -> l1.getName().compareTo(l2.getName()));
+		lineItems.sort((LineItem l1, LineItem l2) -> l1.getName().compareToIgnoreCase(l2.getName()));
 		return Arrays.copyOf(lineItems.toArray(), lineItems.size(), LineItem[].class);
 	}
 
