@@ -19,20 +19,21 @@ Once the application is running, the following REST services are available:
 
 * **Adding an item to store**
 
-    http://localhost:8080/store/add/{ItemName}/{Price}
+  POST  http://localhost:8080/store/add
 
 * **Adding an item to cart**
 
-    http://localhost:8080/cart/add/{ItemName}/{Quantity}
+  POST  http://localhost:8080/cart/add
     
 * **Getting cart items**
 
-    http://localhost:8080/cart/items
+  GET  http://localhost:8080/cart/items
     
 * **Getting cart total**
 
-    http://localhost:8080/cart/total
+   GET http://localhost:8080/cart/total
 
     
 ###Notes
 - Instead of a database, and in memory hashmap has been used to store data. Hence, on each restart data will get erased.
+
