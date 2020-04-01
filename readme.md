@@ -37,3 +37,5 @@ Once the application is running, the following REST services are available:
 ###Notes
 - Instead of a database, and in memory hashmap has been used to store data. Hence, on each restart data will get erased.
 
+##TODO
+- Add Swagger
