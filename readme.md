@@ -1,6 +1,6 @@
-# Demo Project
+# REST Services with Spring Boot
 
-This demo project has been done using Spring Boot. The project will run using an embedded Tomcat server and the methods are exposed as REST services.
+The project will run using an embedded Tomcat server and the methods are exposed as REST services.
 
 ## Running the application
 
@@ -11,7 +11,7 @@ This demo project has been done using Spring Boot. The project will run using an
 
 To start the application
 
-    mvn package && java -jar target/demo-task-0.0.1-SNAPSHOT.jar
+    mvn package && java -jar target/spring-rest-0.0.1-SNAPSHOT.jar
 
 
 Once the application is running, the following REST services are available:
@@ -35,7 +35,4 @@ Once the application is running, the following REST services are available:
 
     
 ###Notes
-- JUnits have been written only for the classes provided in the question, considering the time available.
 - Instead of a database, and in memory hashmap has been used to store data. Hence, on each restart data will get erased.
-- The REST services return simple responses sufficient for the demo.
-- A method has been added to the interface *LineItem* for demo purpose.

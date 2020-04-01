@@ -17,12 +17,12 @@ public class CartController {
 	@Autowired
 	private Store store;
 	
-	@RequestMapping(path="/add/{name}/{quantity}", method = RequestMethod.GET)
-	public String addItemToCart(@PathVariable String name, @PathVariable int quantity)
+	@RequestMapping(path="/add", method = RequestMethod.POST)
+	public String addItemToCart(@RequestBody Map<String, String> request)
 	{
 		StringBuilder errorMessage = new StringBuilder("No error");
 		try {
-			store.addItemToCart(name, quantity);
+			store.addItemToCart(request.get("name"), request.get("quantity"));
 			//TODO Ideally this logic shouldn't be here. But for that we have to redesign the Store interface
 		} catch (IllegalArgumentException e) {
 			errorMessage = new StringBuilder("Error: ").append(e.getMessage());
