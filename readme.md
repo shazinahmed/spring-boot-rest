@@ -8,10 +8,17 @@ The project will run using an embedded Tomcat server and the methods are exposed
 
 - Java 8
 - Maven 3.x.x
+- Docker (if running with docker)
 
-To start the application
+To start the application normally
 
-    mvn package && java -jar target/spring-rest-0.0.1-SNAPSHOT.jar
+    mvn package
+    java -jar target/spring-rest-0.0.1-SNAPSHOT.jar
+    
+To start the application with docker
+
+    docker build -t spring-boot-rest .
+    docker run -p 8080:8080 -t spring-boot-rest
 
 
 Once the application is running, the following REST services are available:
