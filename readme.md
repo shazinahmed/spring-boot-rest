@@ -17,8 +17,7 @@ To start the application normally
     
 To start the application with docker
 
-    docker build -t spring-boot-rest .
-    docker run -p 8080:8080 -t spring-boot-rest
+        docker container run -p 8080:8080 -d --name <CONTAINER NAME> shazahmed/spring-boot-rest
 
 
 Once the application is running, the following REST services are available:
